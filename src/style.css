@@ -1,0 +1,31 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.1); /* trasparenza leggera */
+  backdrop-filter: blur(10px);         /* effetto sfocato */
+  -webkit-backdrop-filter: blur(10px); /* supporto Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* linea sottile */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 750;
+}
+
+h2 {
+  font-size: 3.4rem;
+  font-weight: 750;
+}
+
+p {
+  font-size: 1.35rem;
+  font-weight: 530;
+  max-width: 600px;
+}
+
+.nomebello {
+    max-width: 850px;
+}
