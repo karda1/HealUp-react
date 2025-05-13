@@ -3,13 +3,13 @@ import type { FC } from "react";
 const Navbar: FC = () => {
   return (
     <nav className="navbar bg-body-tertiary fixed-top bg-opacity-50 glass-navbar">
-      <div className="container-fluid container">
+      <div className="container-md">
         <a className="navbar-brand" href="#">
           <img
             src="src/assets/react.svg"
-            alt="Bootstrap"
+            alt="React"
             width="30"
-            height="24"
+            height="30"
           />
           HealUp
         </a>
