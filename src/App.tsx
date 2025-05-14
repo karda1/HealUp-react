@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import FullScreenSection from "./components/FullScreenSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,14 +23,14 @@ function App() {
           vita più sana e armoniosa.
         </p>
       </FullScreenSection>
-      <FullScreenSection type="secondary" bg="#CFDDF7">
+      <FullScreenSection type="secondary" bg="#B4F5FA">
         <h2>Alimentazione sana</h2>
         <p>
           Mangiare sano è un gesto quotidiano di cura verso sé stessi. Favorisce
           lucidità mentale, energia e benessere a ogni età.
         </p>
       </FullScreenSection>
-      <FullScreenSection type="secondary" bg="#E3C6FD">
+      <FullScreenSection type="secondary" bg="#CFDDF7">
         <p>
           L’igiene quotidiana è fondamentale per il benessere fisico e
           mentale.Curare se stessi attraverso semplici abitudini igieniche
@@ -37,7 +38,7 @@ function App() {
         </p>
         <h2>Igiene</h2>
       </FullScreenSection>
-      <FullScreenSection type="secondary" bg="#FDC6C7">
+      <FullScreenSection type="secondary" bg="#A0C7FA">
         <h2>Attività fisica</h2>
         <p>
           L’attività fisica è un gesto quotidiano di cura verso sé stessi.
@@ -45,7 +46,7 @@ function App() {
           e in ogni fase del percorso.
         </p>
       </FullScreenSection>
-      <FullScreenSection type="secondary" bg="#FBEABD">
+      <FullScreenSection type="secondary" bg="#89E8FA">
         <p>
           Un sonno di qualità e un buon riposo sono essenziali per rigenerare
           corpo e mente, migliorando la salute, l’energia e la capacità di
@@ -53,7 +54,7 @@ function App() {
         </p>
         <h2>Sonno e riposo</h2>
       </FullScreenSection>
-      <FullScreenSection type="secondary" bg="#e3f7cf">
+      <FullScreenSection type="secondary" bg="#64C6F9">
         <h2>Gestione dello stress</h2>
         <p>
           Gestire lo stress è fondamentale per il benessere mentale e
@@ -61,6 +62,7 @@ function App() {
           equilibrio, calma e concentrazione.
         </p>
       </FullScreenSection>
+      <Footer></Footer>
     </>
   );
 }
