@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import FullScreenSection from "./components/FullScreenSection";
 import Footer from "./components/Footer";
 import ParticlesCustom from "./components/ParticlesCustom";
+import SubSection from "./components/SubSection";
 function App() {
   const [selectedSectionId, setSelectedSectionId] = useState<string | null>(
     null
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       {/* Aggiungi il componente ParticlesCustom */}
-      <ParticlesCustom />
+      <ParticlesCustom   />
       <Navbar onSectionClick={handleSectionClick} />{" "}
       {/* Passiamo la funzione alla Navbar */}
       {selectedSection ? (
@@ -50,7 +51,7 @@ function App() {
             </p>
           </FullScreenSection>
 
-          {sections.map((section) => (
+          {/*{sections.map((section) => (
             <FullScreenSection
               key={section.id}
               bg={section.bg}
@@ -70,9 +71,10 @@ function App() {
               </h2>
               <p>{section.description}</p>
             </FullScreenSection>
-          ))}
+          ))}*/}
         </>
       )}
+      <SubSection />
       <Footer />
     </>
   );
