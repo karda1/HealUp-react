@@ -1,9 +1,9 @@
-body {
-  font-family: "Poppins", sans-serif;
-}
-
 *{
   z-index: 10;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 .glass-navbar {
@@ -100,11 +100,84 @@ p {
   color: #86f1f5;
 }
 
-h3 {
+h3, h2{
   transition: transform 0.3s ease, color 0.3s ease; /* Transizione per ingrandire e per cambiare colore */
 }
 
 h3:hover {
   transform: scale(1.1); /* Ingrandisce il testo */
   color: #000000; /* Colore del testo quando si passa sopra */
+}
+
+h2:hover {
+  transform: scale(1.1); /* Ingrandisce il testo */
+  color: #000000; /* Colore del testo quando si passa sopra */
+}
+
+.info-section-fullpage {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #CFDDF7;
+  padding: 0;
+  margin: 0;
+}
+
+.info-section {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 7rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-item {
+  width: 100%;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 1.5rem 2rem;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.info-item.open {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.info-title {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  outline: none;
+  color: #222;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.arrow-open {
+  transform: rotate(180deg);
 }

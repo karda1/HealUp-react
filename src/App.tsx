@@ -5,10 +5,19 @@ import FullScreenSection from "./components/FullScreenSection";
 import Footer from "./components/Footer";
 import ParticlesCustom from "./components/ParticlesCustom";
 import SubSection from "./components/SubSection";
+import InfoSection from "./components/InfoSection";
+import { useEffect } from "react";
+
+
+
 function App() {
   const [selectedSectionId, setSelectedSectionId] = useState<string | null>(
     null
   );
+
+  useEffect(() => {
+    document.title = "HealUp";
+  }, []);
 
   // Trova la sezione selezionata
   const selectedSection = sections.find((sec) => sec.id === selectedSectionId);
@@ -74,6 +83,7 @@ function App() {
           ))}*/}
         </>
       )}
+      <InfoSection />
       <SubSection />
       <Footer />
     </>

@@ -42,7 +42,6 @@ const Navbar: FC<NavbarProps> = ({ onSectionClick }) => {
             <li><a className="menu-item" href="#" onClick={() => onSectionClick("contatti")}>Contatti</a></li>
             <li><a className="menu-item" href="#" onClick={() => onSectionClick("about")}>About</a></li>
             <li><a className="menu-item" href="#" onClick={() => onSectionClick("alimentazione-sana")}>Alimentazione sana</a></li>
-            <li><a className="menu-item" href="#" onClick={() => onSectionClick("igiene")}>Igiene</a></li>
             <li><a className="menu-item" href="#" onClick={() => onSectionClick("attivita-fisica")}>Attività fisica</a></li>
             <li><a className="menu-item" href="#" onClick={() => onSectionClick("sonno-e-riposo")}>Sonno e riposo</a></li>
             <li><a className="menu-item" href="#" onClick={() => onSectionClick("gestione-dello-stress")}>Gestione dello stress</a></li>

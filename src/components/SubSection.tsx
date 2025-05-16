@@ -4,7 +4,7 @@ const SubSection: FC = () => (
   <div
     className="container-fluid"
     style={{
-      backgroundColor: "#B4F5FA",
+      backgroundColor: "#A0C7F6",
       minHeight: "100vh",
       width: "100vw",
       margin: 0,

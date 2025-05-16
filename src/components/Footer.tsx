@@ -4,7 +4,7 @@ const Footer: FC = () => {
   return (
     <footer
       className="text-dark pt-5"
-      style={{ backgroundColor: "#1EB9D9" }}
+      style={{ backgroundColor: "#A0C7F6" }}
     >
       <div className="container">
         <div className="row">
