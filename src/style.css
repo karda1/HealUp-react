@@ -181,3 +181,48 @@ h2:hover {
 .arrow-open {
   transform: rotate(180deg);
 }
+
+#textCard {
+  border: none;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+#pageText {
+  text-align: left;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+#pageTitle {
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+}
+
+#subSection {
+  background-color: #A0C7F6;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#card {
+  padding: 3rem;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+}
+
+.tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+}

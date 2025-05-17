@@ -33,32 +33,18 @@ function App() {
           <div className="container py-5">
             <div className="row justify-content-center">
               <div className="col-12">
-                <h2
+                <h2 id="pageTitle"
                   className="text-center"
-                  style={{
-                    marginTop: "10rem",
-                    marginBottom: "3rem",
-                  }}
                 >
                   {selectedSection.title}
                 </h2>
               </div>
               <div className="col-12 col-md-10 col-lg-8">
-                <div
+                <div id="textCard"
                   className="card shadow"
-                  style={{
-                    border: "none",
-                    borderRadius: "1.5rem",
-                    background: "rgba(255,255,255,0.6)", // ancora più trasparente
-                  }}
                 >
                   <div className="card-body p-4 p-md-5">
-                    <div
-                      style={{
-                        textAlign: "left",
-                        fontSize: "1.15rem",
-                        lineHeight: 1.7,
-                      }}
+                    <div id="pageText"
                       dangerouslySetInnerHTML={{ __html: selectedSection.sectionText }}
                     />
                   </div>

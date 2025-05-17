@@ -15,8 +15,6 @@ const ParticlesCustom: React.FC = () => {
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    // Puoi gestire il container qui se necessario
-    // console.log(container);
   };
 
   return (
@@ -24,14 +22,6 @@ const ParticlesCustom: React.FC = () => {
       {init && (
         <Particles
           id="tsparticles"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100vh",
-            zIndex: -100,
-          }}
           particlesLoaded={particlesLoaded}
           options={{
             background: {
