@@ -1,51 +1,54 @@
 import type { FC } from "react";
 
-const Footer: FC = () => {
+interface FooterProps {
+  bg?: string;
+}
+
+const Footer: FC<FooterProps> = ({ bg }) => {
   return (
     <footer
       className="text-dark pt-5"
-      style={{ backgroundColor: "#A0C7F6" }}
+      style={{ backgroundColor: bg || "#A0C7F6" }}
     >
       <div className="container">
         <div className="row">
           <div className="col-md-4 mb-3">
             <a className="navbar-brand" href="#">
-          <img
-            src="src/assets/react.svg"
-            alt="React"
-            width="30"
-            height="30"
-          />
-          HealUp
-        </a>
-        <br />
-        <br />
-          <a href="https://www.facebook.com/">
-            <img
-              src="./img/facebook.png"
-              alt="React"
-              width="25"
-              height="25"
-            />
-          </a>
-          <a href="https://www.instagram.com/">
-            <img
-              src="./img/instagram.png"
-              alt="React"
-              width="25"
-              height="25"
-            />
-          </a>
-          <a href="https://www.x.com/">
-            <img
-              src="./img/X.png"
-              alt="React"
-              width="20"
-              height="20"
-            />
-          </a>
+              <img
+                src="src/assets/react.svg"
+                alt="React"
+                width="30"
+                height="30"
+              />
+              HealUp
+            </a>
+            <br />
+            <br />
+            <a href="https://www.facebook.com/">
+              <img
+                src="./img/facebook.png"
+                alt="Facebook"
+                width="25"
+                height="25"
+              />
+            </a>
+            <a href="https://www.instagram.com/">
+              <img
+                src="./img/instagram.png"
+                alt="Instagram"
+                width="25"
+                height="25"
+              />
+            </a>
+            <a href="https://www.x.com/">
+              <img
+                src="./img/X.png"
+                alt="X"
+                width="20"
+                height="20"
+              />
+            </a>
           </div>
-          
 
           <div className="col-md-4 mb-3">
             <h5>Link utili</h5>

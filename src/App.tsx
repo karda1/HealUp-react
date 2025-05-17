@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import sections from "./data/sectionsData.json";
 import Navbar from "./components/Navbar";
 import FullScreenSection from "./components/FullScreenSection";
@@ -6,37 +6,66 @@ import Footer from "./components/Footer";
 import ParticlesCustom from "./components/ParticlesCustom";
 import SubSection from "./components/SubSection";
 import InfoSection from "./components/InfoSection";
-import { useEffect } from "react";
-
-
 
 function App() {
-  const [selectedSectionId, setSelectedSectionId] = useState<string | null>(
-    null
-  );
+  const [selectedSectionId, setSelectedSectionId] = useState<string | null>(null);
 
   useEffect(() => {
     document.title = "HealUp";
   }, []);
 
-  // Trova la sezione selezionata
   const selectedSection = sections.find((sec) => sec.id === selectedSectionId);
 
-  // Funzione per gestire il clic su una sezione dalla Navbar
   const handleSectionClick = (id: string) => {
     setSelectedSectionId(id);
   };
 
+  const handleBack = () => {
+    setSelectedSectionId(null);
+  };
+
   return (
     <>
-      {/* Aggiungi il componente ParticlesCustom */}
-      <ParticlesCustom   />
-      <Navbar onSectionClick={handleSectionClick} />{" "}
-      {/* Passiamo la funzione alla Navbar */}
+      <ParticlesCustom />
+      <Navbar onSectionClick={handleSectionClick} />
       {selectedSection ? (
-        <FullScreenSection bg={selectedSection.bg} type="secondary">
-          <h2>{selectedSection.title}</h2>
-          <p>{selectedSection.description}</p>
+        <FullScreenSection bg={selectedSection.bg || "#fff"} type="secondary">
+          <div className="container py-5">
+            <div className="row justify-content-center">
+              <div className="col-12">
+                <h2
+                  className="text-center"
+                  style={{
+                    marginTop: "10rem",
+                    marginBottom: "3rem",
+                  }}
+                >
+                  {selectedSection.title}
+                </h2>
+              </div>
+              <div className="col-12 col-md-10 col-lg-8">
+                <div
+                  className="card shadow"
+                  style={{
+                    border: "none",
+                    borderRadius: "1.5rem",
+                    background: "rgba(255,255,255,0.6)", // ancora più trasparente
+                  }}
+                >
+                  <div className="card-body p-4 p-md-5">
+                    <div
+                      style={{
+                        textAlign: "left",
+                        fontSize: "1.15rem",
+                        lineHeight: 1.7,
+                      }}
+                      dangerouslySetInnerHTML={{ __html: selectedSection.sectionText }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </FullScreenSection>
       ) : (
         <>
@@ -60,32 +89,11 @@ function App() {
             </p>
           </FullScreenSection>
 
-          {/*{sections.map((section) => (
-            <FullScreenSection
-              key={section.id}
-              bg={section.bg}
-              type="secondary"
-            >
-              <h2
-                style={{ cursor: "pointer", transition: "transform 0.3s" }}
-                onClick={() => setSelectedSectionId(section.id)} // Mantieni il click per selezionare la sezione
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "scale(1.05)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "scale(1)")
-                }
-              >
-                {section.title}
-              </h2>
-              <p>{section.description}</p>
-            </FullScreenSection>
-          ))}*/}
+          <InfoSection />
+          <SubSection onCardClick={setSelectedSectionId} />
         </>
       )}
-      <InfoSection />
-      <SubSection />
-      <Footer />
+      <Footer bg={selectedSection?.footerBg} />
     </>
   );
 }
