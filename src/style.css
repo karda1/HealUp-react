@@ -100,7 +100,7 @@ p {
   color: #86f1f5;
 }
 
-h3, h2{
+h3, h2, h1{
   transition: transform 0.3s ease, color 0.3s ease; /* Transizione per ingrandire e per cambiare colore */
 }
 
@@ -110,6 +110,11 @@ h3:hover {
 }
 
 h2:hover {
+  transform: scale(1.1); /* Ingrandisce il testo */
+  color: #000000; /* Colore del testo quando si passa sopra */
+}
+
+h1:hover {
   transform: scale(1.1); /* Ingrandisce il testo */
   color: #000000; /* Colore del testo quando si passa sopra */
 }
@@ -128,7 +133,7 @@ h2:hover {
 .info-section {
   width: 100vw;
   min-height: 100vh;
-  padding: 7rem;
+  padding: 15rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -221,6 +226,13 @@ h2:hover {
   background: rgba(255, 255, 255, 0.6);
   border: none;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+}
+
+#cardImage {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .tsparticles {
