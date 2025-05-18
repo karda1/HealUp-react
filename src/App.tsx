@@ -67,7 +67,7 @@ function App() {
               accompagnarti ogni giorno nella cura di te stesso, attraverso
               semplici abitudini che fanno la differenza. Qui troverai consigli
               pratici e approfondimenti su alimentazione equilibrata, attività
-              fisica, igiene personale, qualità del sonno e gestione dello
+              fisica, qualità del sonno e gestione dello
               stress. Ogni sezione è pensata per aiutarti a vivere meglio, con
               più consapevolezza, energia e serenità. HealUp è il tuo spazio di
               benessere: un passo alla volta, verso una vita più sana e
