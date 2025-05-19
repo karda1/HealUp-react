@@ -1,32 +1,23 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import type { Engine, Container } from "@tsparticles/engine";
 
-const ParticlesCustom: React.FC = () => {
+const ParticlesCustom = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
-    initParticlesEngine(async (engine: Engine) => {
+    initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
+    }).then(() => setInit(true));
   }, []);
-
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-  };
 
   return (
     <>
       {init && (
         <Particles
           id="tsparticles"
-          particlesLoaded={particlesLoaded}
           options={{
-            background: {
-              color: { value: "transparent" },
-            },
+            background: { color: { value: "transparent" } },
             fpsLimit: 60,
             interactivity: {
               events: {
@@ -39,26 +30,16 @@ const ParticlesCustom: React.FC = () => {
               },
             },
             particles: {
-              color: { value: "#ffffff" },
+              color: { value: "#fff" },
               links: {
-                color: "#ffffff",
+                color: "#fff",
                 distance: 150,
                 enable: true,
                 opacity: 0.5,
                 width: 1,
               },
-              move: {
-                direction: "none",
-                enable: true,
-                outModes: { default: "bounce" },
-                random: false,
-                speed: 2,
-                straight: false,
-              },
-              number: {
-                density: { enable: true },
-                value: 80,
-              },
+              move: { enable: true, speed: 2, outModes: { default: "bounce" } },
+              number: { density: { enable: true }, value: 80 },
               opacity: { value: 0.5 },
               shape: { type: "circle" },
               size: { value: { min: 1, max: 5 } },
