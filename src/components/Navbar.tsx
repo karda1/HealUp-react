@@ -3,13 +3,12 @@ import { useState } from "react";
 const menuItems = [
   { id: "home", label: "Home" },
   { id: "contatti", label: "Contatti" },
-  { id: "about", label: "About" },
   { id: "alimentazione-sana", label: "Alimentazione sana" },
   { id: "attivita-fisica", label: "Attività fisica" },
   { id: "sonno-e-riposo", label: "Sonno e riposo" },
   { id: "gestione-dello-stress", label: "Gestione dello stress" },
   { id: "igiene", label: "Igiene" },
-  { id: "relazioni", label: "Relazioni" },
+  { id: "relazioni", label: "Relazioni sane" },
 ];
 
 const Navbar = ({

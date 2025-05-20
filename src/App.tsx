@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import ParticlesCustom from "./components/ParticlesCustom";
 import SubSection from "./components/SubSection";
 import InfoSection from "./components/InfoSection";
+import ContactSection from "./components/contactSection";
 
 function App() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -14,13 +15,33 @@ function App() {
     document.title = "HealUp";
   }, []);
 
+  // Se hai rimosso "contatti" dal JSON, questa variabile sarà undefined quando selected === "contatti"
   const section = sections.find((s) => s.id === selected);
 
   return (
     <>
       <ParticlesCustom />
       <Navbar onSectionClick={setSelected} />
-      {section ? (
+      {selected === "contatti" ? (
+        <FullScreenSection bg="#63B8FF" type="secondary">
+          <div className="container py-5">
+            <div className="row justify-content-center">
+              <div className="col-12">
+                <h2 id="pageTitle" className="text-center">
+                  Contatti
+                </h2>
+              </div>
+              <div className="col-12 col-md-10 col-lg-8">
+                <div id="textCard" className="card shadow">
+                  <div className="card-body p-4 p-md-5">
+                    <ContactSection />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FullScreenSection>
+      ) : section ? (
         <FullScreenSection bg={section.bg || "#fff"} type="secondary">
           <div className="container py-5">
             <div className="row justify-content-center">
@@ -65,7 +86,7 @@ function App() {
           <SubSection onCardClick={setSelected} />
         </>
       )}
-      <Footer bg={section?.footerBg} />
+      <Footer bg={selected === "contatti" ? "#63B8FF" : section?.footerBg} />
     </>
   );
 }
