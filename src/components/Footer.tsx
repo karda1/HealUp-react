@@ -10,7 +10,7 @@ const Footer: FC<{ bg?: string }> = ({ bg }) => (
         <div className="col-md-4 mb-3">
           <a className="navbar-brand" href="#">
             <img
-              src="src/assets/react.svg"
+              src="./img/heart.png"
               alt="React"
               width="30"
               height="30"

@@ -46,7 +46,7 @@ function App() {
         <>
           <FullScreenSection bg="#CFF7D3">
             <h1>HealUp</h1>
-            <h3>prenditi cura di te, ogni giorno</h3>
+            <h4 id="subTitle">prenditi cura di te, ogni giorno</h4>
           </FullScreenSection>
           <FullScreenSection bg="#CFF7F4">
             <h2>Benvenuto su HealUp!</h2>

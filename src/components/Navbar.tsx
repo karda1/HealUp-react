@@ -8,6 +8,8 @@ const menuItems = [
   { id: "attivita-fisica", label: "Attività fisica" },
   { id: "sonno-e-riposo", label: "Sonno e riposo" },
   { id: "gestione-dello-stress", label: "Gestione dello stress" },
+  { id: "igiene", label: "Igiene" },
+  { id: "relazioni", label: "Relazioni" },
 ];
 
 const Navbar = ({
@@ -26,7 +28,7 @@ const Navbar = ({
           onClick={() => onSectionClick("home")}
         >
           <img
-            src="src/assets/react.svg"
+            src="./img/heart.png"
             alt="React"
             width="30"
             height="30"
@@ -35,7 +37,7 @@ const Navbar = ({
           HealUp
         </a>
         <button
-          className="btn btn-light d-flex align-items-center justify-content-center"
+          className="btn d-flex align-items-center justify-content-center"
           type="button"
           onClick={() => setOpen((v) => !v)}
         >

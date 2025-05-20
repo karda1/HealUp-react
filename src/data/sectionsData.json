@@ -35,5 +35,23 @@
     "footerBg": "#41EADF",
     "description": "Gestire lo stress è fondamentale per il benessere mentale e fisico. Tecniche di rilassamento e consapevolezza aiutano a ritrovare equilibrio, calma e concentrazione.",
     "image": { "src": "/img/stress.png" }
+  },
+  {
+    "id": "igiene",
+    "title": "Igiene",
+    "sectionText": "Testo",
+    "bg": "#41EADF",
+    "footerBg": "#41EADF",
+    "description": "Testo",
+    "image": { "src": "/img/washing-hand.png" }
+  },
+  {
+    "id": "relazioni",
+    "title": "Relazioni",
+    "sectionText": "Testo",
+    "bg": "#41EADF",
+    "footerBg": "#41EADF",
+    "description": "Testo",
+    "image": { "src": "/img/relationship.png" }
   }
 ]
