@@ -15,7 +15,6 @@ function App() {
     document.title = "HealUp";
   }, []);
 
-  // Se hai rimosso "contatti" dal JSON, questa variabile sarà undefined quando selected === "contatti"
   const section = sections.find((s) => s.id === selected);
 
   return (
@@ -71,7 +70,7 @@ function App() {
           </FullScreenSection>
           <FullScreenSection bg="#CFF7F4">
             <h2>Benvenuto su HealUp!</h2>
-            <p className="mx-auto nomebello">
+            <p className="mx-auto introText">
               La salute è un percorso, non una meta. HealUp nasce per
               accompagnarti ogni giorno nella cura di te stesso, attraverso
               semplici abitudini che fanno la differenza. Qui troverai consigli

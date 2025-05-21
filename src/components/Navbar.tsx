@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const menuItems = [
   { id: "home", label: "Home" },
@@ -17,6 +17,20 @@ const Navbar = ({
   onSectionClick: (id: string) => void;
 }) => {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
 
   return (
     <>
@@ -44,14 +58,17 @@ const Navbar = ({
         </button>
       </nav>
       {open && (
-        <div className="menu-bar">
+        <div className="menu-bar" ref={menuRef}>
           <ul className="menu-list">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <a
                   className="menu-item"
                   href="#"
-                  onClick={() => onSectionClick(item.id)}
+                  onClick={() => {
+                    onSectionClick(item.id);
+                    setOpen(false);
+                  }}
                 >
                   {item.label}
                 </a>
