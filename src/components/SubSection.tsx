@@ -29,7 +29,7 @@ const SubSection = ({ onCardClick }: { onCardClick: (id: string) => void }) => (
               {s.image?.src && (
                 <img
                   id="cardImage"
-                  src={s.image.src.replace("./", "/")}
+                  src={s.image.src}
                   alt={s.title}
                   className="img-fluid d-block"
                 />

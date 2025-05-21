@@ -10,7 +10,7 @@ const Footer: FC<{ bg?: string }> = ({ bg }) => (
         <div className="col-md-4 mb-3">
           <a className="navbar-brand" href="#">
             <img
-              src="./img/heart.png"
+              src="/img/heart.png"
               alt="React"
               width="30"
               height="30"
@@ -21,7 +21,7 @@ const Footer: FC<{ bg?: string }> = ({ bg }) => (
           <br />
           <a href="https://www.facebook.com/">
             <img
-              src="./img/facebook.png"
+              src="/img/facebook.png"
               alt="Facebook"
               width="25"
               height="25"
@@ -29,14 +29,14 @@ const Footer: FC<{ bg?: string }> = ({ bg }) => (
           </a>
           <a href="https://www.instagram.com/">
             <img
-              src="./img/instagram.png"
+              src="/img/instagram.png"
               alt="Instagram"
               width="25"
               height="25"
             />
           </a>
           <a href="https://www.x.com/">
-            <img src="./img/X.png" alt="X" width="20" height="20" />
+            <img src="/img/X.png" alt="X" width="20" height="20" />
           </a>
         </div>
         <div className="col-md-4 mb-3">

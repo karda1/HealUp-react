@@ -41,7 +41,7 @@ const Navbar = ({
           onClick={() => onSectionClick("home")}
         >
           <img
-            src="./img/heart.png"
+            src="/img/heart.png"
             alt="React"
             width="30"
             height="30"
