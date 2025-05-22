@@ -10,16 +10,13 @@ import ContactSection from "./components/contactSection";
 
 function App() {
   const [selected, setSelected] = useState<string | null>(null);
-
-  useEffect(() => {
-    document.title = "HealUp";
-  }, []);
-
+  
   const section = sections.find((s) => s.id === selected);
 
   return (
     <>
       <ParticlesCustom />
+      <title>HealUp</title>
       <Navbar onSectionClick={setSelected} />
       {selected === "contatti" ? (
         <FullScreenSection bg="#63B8FF" type="secondary">
