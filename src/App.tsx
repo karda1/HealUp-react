@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import sections from "./data/sectionsData.json";
 import Navbar from "./components/Navbar";
 import FullScreenSection from "./components/FullScreenSection";
@@ -9,17 +9,23 @@ import InfoSection from "./components/InfoSection";
 import ContactSection from "./components/contactSection";
 
 function App() {
+  //Stato che tiene traccia della sezione selezionata (null = home)
   const [selected, setSelected] = useState<string | null>(null);
-  
+
+  //Trova la sezione corrispondente all'id selezionato
   const section = sections.find((s) => s.id === selected);
 
   return (
     <>
+      {/*Sfondo animato con particelle*/}
       <ParticlesCustom />
+      {/*Titolo della pagina*/}
       <title>HealUp</title>
+      {/*Navbar*/}
       <Navbar onSectionClick={setSelected} />
+      {/*Sezione contatti*/}
       {selected === "contatti" ? (
-        <FullScreenSection bg="#63B8FF" type="secondary">
+        <FullScreenSection bg="#63B8FF">
           <div className="container py-5">
             <div className="row justify-content-center">
               <div className="col-12">
@@ -30,6 +36,7 @@ function App() {
               <div className="col-12 col-md-10 col-lg-8">
                 <div id="textCard" className="card shadow">
                   <div className="card-body p-4 p-md-5">
+                    {/*Form contatti*/}
                     <ContactSection />
                   </div>
                 </div>
@@ -38,7 +45,7 @@ function App() {
           </div>
         </FullScreenSection>
       ) : section ? (
-        <FullScreenSection bg={section.bg || "#fff"} type="secondary">
+        <FullScreenSection bg={section.bg || "#fff"}>
           <div className="container py-5">
             <div className="row justify-content-center">
               <div className="col-12">
@@ -49,9 +56,10 @@ function App() {
               <div className="col-12 col-md-10 col-lg-8">
                 <div id="textCard" className="card shadow">
                   <div className="card-body p-4 p-md-5">
+                    {/*Testo della sezione*/}
                     <div
                       id="pageText"
-                      dangerouslySetInnerHTML={{ __html: section.sectionText }}
+                      dangerouslySetInnerHTML={{ __html: section.sectionText }} //sectionText contiene componenti HTML, percio' va usato dangerouslySetInnerHTML
                     />
                   </div>
                 </div>
@@ -60,6 +68,7 @@ function App() {
           </div>
         </FullScreenSection>
       ) : (
+        //Home page: mostra titolo, sottotitolo, info e sottosezioni
         <>
           <FullScreenSection bg="#CFF7D3">
             <h1>HealUp</h1>
@@ -78,10 +87,13 @@ function App() {
               alla volta, verso una vita più sana e armoniosa.
             </p>
           </FullScreenSection>
+          {/*Sezione InfoSection*/}
           <InfoSection />
+          {/*Sottosezioni con card cliccabili (SubSection)*/}
           <SubSection onCardClick={setSelected} />
         </>
       )}
+      {/*Footer, cambia colore in base alla sezione*/}
       <Footer bg={selected === "contatti" ? "#63B8FF" : section?.footerBg} />
     </>
   );

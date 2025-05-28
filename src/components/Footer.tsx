@@ -1,39 +1,24 @@
 import type { FC } from "react";
 
-const Footer: FC<{ bg?: string }> = ({ bg }) => (
+const Footer: FC<{ bg?: string }> = ({ bg }) => ( //Il compomente puo' ricevere una prop (parametro) opzionale chiamata bg di tipo string
   <footer
     className="text-dark pt-5"
-    style={{ backgroundColor: bg || "#A0C7F6" }}
+    style={{ backgroundColor: bg || "#A0C7F6" }} //Background color personalizzato o predefinito
   >
     <div className="container">
       <div className="row">
         <div className="col-md-4 mb-3">
           <a className="navbar-brand" href="#">
-            <img
-              src="/img/heart.png"
-              alt="React"
-              width="30"
-              height="30"
-            />
+            <img src="/img/heart.png" alt="HealUp" width="30" height="30"/>
             HealUp
           </a>
           <br />
           <br />
           <a href="https://www.facebook.com/">
-            <img
-              src="/img/facebook.png"
-              alt="Facebook"
-              width="25"
-              height="25"
-            />
+            <img src="/img/facebook.png" alt="Facebook" width="25" height="25"/>
           </a>
           <a href="https://www.instagram.com/">
-            <img
-              src="/img/instagram.png"
-              alt="Instagram"
-              width="25"
-              height="25"
-            />
+            <img src="/img/instagram.png" alt="Instagram" width="25" height="25"/>
           </a>
           <a href="https://www.x.com/">
             <img src="/img/X.png" alt="X" width="20" height="20" />
@@ -43,19 +28,13 @@ const Footer: FC<{ bg?: string }> = ({ bg }) => (
           <h5>Link utili</h5>
           <ul className="list-unstyled">
             <li>
-              <a href="#" className="text-dark text-decoration-none">
-                Home
-              </a>
+              <a href="#" className="text-dark text-decoration-none">Home</a>
             </li>
             <li>
-              <a href="#" className="text-dark text-decoration-none">
-                Servizi
-              </a>
+              <a href="#" className="text-dark text-decoration-none">Servizi</a>
             </li>
             <li>
-              <a href="#" className="text-dark text-decoration-none">
-                Privacy Policy
-              </a>
+              <a href="#" className="text-dark text-decoration-none">Privacy Policy</a>
             </li>
           </ul>
         </div>

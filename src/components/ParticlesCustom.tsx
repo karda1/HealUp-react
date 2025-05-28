@@ -38,7 +38,11 @@ const ParticlesCustom = () => {
                 opacity: 0.5,
                 width: 1,
               },
-              move: { enable: true, speed: 2, outModes: { default: "bounce" } },
+              move: {
+                enable: true,
+                speed: 2,
+                outModes: { default: "bounce" },
+              },
               number: { density: { enable: true }, value: 80 },
               opacity: { value: 0.5 },
               shape: { type: "circle" },

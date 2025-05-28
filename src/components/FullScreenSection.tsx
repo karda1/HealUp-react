@@ -1,22 +1,15 @@
 import type { FC, ReactNode } from "react";
 
+//Componente che mostra una sezione a schermo intero con sfondo personalizzato
 const FullScreenSection: FC<{
-  children: ReactNode;
-  type?: string;
-  bg?: string;
-  className?: string;
-}> = ({ type, children, bg = "light", className = "" }) => (
+  children: ReactNode; //Contenuto della sezione
+  bg?: string; //Colore di sfondo opzionale
+}> = ({ children, bg = "light" }) => (
   <div
-    className={`d-flex align-items-center justify-content-center ${className}`}
+    className="d-flex align-items-center justify-content-center"
     style={{ minHeight: "100vh", backgroundColor: bg }}
   >
-    <div
-      className={`container text-center${
-        type === "secondary"
-          ? " d-flex flex-column flex-md-row align-items-center justify-content-between"
-          : ""
-      }`}
-    >
+    <div className="container text-center">
       {children}
     </div>
   </div>
